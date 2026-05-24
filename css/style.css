@@ -1,0 +1,269 @@
+/* ==========================================================================
+   1. REINICIO DE ESTILOS (RESET) Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f1; /* Fondo gris claro con un ligero toque verdoso */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Contenedor que limita el ancho de la página en monitores grandes */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. PORTADA / ENCABEZADO
+   ========================================================================== */
+.portada {
+    background-color: #1b5e20; /* Verde bosque profundo */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #0d3c11;
+}
+
+.portada h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.portada h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #e8f5e9;
+    margin-bottom: 15px;
+}
+
+.portada .autor {
+    font-size: 0.95rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   3. DISPOSICIÓN EN REJILLA (GRID) DE LOS DOS MÓDULOS
+   ========================================================================== */
+.panel-herramientas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 25px; /* Espaciado entre columnas */
+    margin-top: 15px;
+}
+
+/* Estilo común para ambas columnas */
+.seccion-bloque {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Personalización de bordes superiores por tema */
+.col-fibonacci { 
+    border-top: 6px solid #2e7d32; 
+}
+
+.col-primos { 
+    border-top: 6px solid #0277bd; 
+}
+
+/* Títulos y textos internos */
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.col-fibonacci h3 { color: #2e7d32; }
+.col-primos h3 { color: #0277bd; }
+
+h4 {
+    margin: 18px 0 6px 0;
+    color: #455a64;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.95rem;
+    text-align: justify;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   4. FORMULARIOS E INPUTS
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #cfd8dc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* Colores de enfoque (focus) dinámicos para los inputs */
+.col-fibonacci input:focus {
+    border-color: #2e7d32;
+}
+
+.col-primos input:focus {
+    border-color: #0277bd;
+}
+
+/* ==========================================================================
+   5. BOTONES DE ACCIÓN
+   ========================================================================== */
+button {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Botón Fibonacci */
+.btn-fib { background-color: #2e7d32; }
+.btn-fib:hover { background-color: #1b5e20; }
+
+/* Botón Primos */
+.btn-pri { background-color: #0277bd; }
+.btn-pri:hover { background-color: #01579b; }
+
+/* ==========================================================================
+   6. CAJAS DE RESULTADO DINÁMICO
+   ========================================================================== */
+.caja-resultado {
+    background-color: #f8f9fa;
+    border: 2px dashed #cfd8dc;
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 65px;
+    margin-top: 5px;
+    overflow-y: auto;
+}
+
+.texto-espera {
+    color: #757575;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ==========================================================================
+   7. PIE DE PÁGINA (FOOTER) Y ENLACES
+   ========================================================================== */
+.pie-pagina {
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.enlaces-proyecto {
+    margin-top: 12px;
+}
+
+.enlaces-proyecto a {
+    color: #81c784;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.enlaces-proyecto a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.pie-pagina .separador {
+    color: #546e7a;
+}
+
+/* ==========================================================================
+   8. DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Rompe las dos columnas y las apila en una sola para Tablets y Celulares */
+@media (max-width: 850px) {
+    .panel-herramientas {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 20px;
+    }
+
+    .portada h1 {
+        font-size: 1.8rem;
+    }
+
+    .portada h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajustes mínimos para pantallas muy pequeñas (celulares compactos) */
+@media (max-width: 480px) {
+    .contenedor-principal {
+        padding: 10px;
+    }
+
+    .seccion-bloque {
+        padding: 15px;
+    }
+
+    .pie-pagina .separador {
+        display: none; /* Esconde la barra separadora */
+    }
+
+    .enlaces-proyecto a {
+        display: block; /* Los enlaces se ponen uno abajo del otro */
+        margin: 10px 0;
+    }
+}

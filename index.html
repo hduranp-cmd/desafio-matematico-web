@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Web: Matemáticas en el Mundo Real</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="portada">
+        <h1>Matemáticas que resuelven problemas</h1>
+        <h2>Fibonacci y Números Primos en la Vida Real</h2>
+        <p class="autor"><strong>Desarrollado por:</strong> Huascar Duran Palenque</p>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="panel-herramientas">
+            
+            <section class="seccion-bloque col-fibonacci">
+                <h3>🌱 Fibonacci en Diseño Natural</h3>
+                
+                <h4>Contexto del Problema Real</h4>
+                <p>
+                    En el mundo natural, las plantas distribuyen sus hojas, ramas y pétalos de forma óptima para capturar la mayor cantidad de luz solar y lluvia sin obstruirse entre sí. Este orden geométrico tan eficiente responde de manera exacta a los patrones de la Sucesión de Fibonacci.
+                </p>
+
+                <h4>Explicación del Algoritmo</h4>
+                <p>
+                    La serie matemática avanza sumando los dos valores previos (0, 1, 1, 2, 3, 5, 8, 13...). El sistema toma la cantidad de niveles que el usuario ingresa en el formulario y ejecuta un ciclo iterativo que calcula de forma progresiva cuántos elementos vegetales se desarrollan en cada capa, utilizando variables simples y sin el uso de vectores.
+                </p>
+
+                <h4>Formulario de Entrada</h4>
+                <form id="formFibonacci">
+                    <div class="grupo-campo">
+                        <label for="niveles">Cantidad de niveles a analizar:</label>
+                        <input type="number" id="niveles" min="1" max="30" placeholder="Ej. 8" required>
+                    </div>
+                    <button type="button" id="btnCalcular" class="btn-fib">Mostrar Secuencia</button>
+                </form>
+
+                <h4>Resultado en Pantalla</h4>
+                <div id="resultado" class="caja-resultado">
+                    <p class="texto-espera">Ingresa los niveles para generar la secuencia botánica.</p>
+                </div>
+
+                <h4>Conclusión</h4>
+                <p>
+                    La sucesión de Fibonacci demuestra que la eficiencia botánica no ocurre al azar, sino que responde a un código matemático natural que maximiza el aprovechamiento del espacio y los recursos.
+                </p>
+            </section>
+
+
+            <section class="seccion-bloque col-primos">
+                <h3>🔑 Primos en Códigos de Acceso</h3>
+                
+                <h4>Contexto del Problema Real</h4>
+                <p>
+                    La seguridad informática requiere validar de manera constante la solidez de las claves numéricas. Al verificar si un código de acceso corresponde a un número primo, se añaden capas de filtrado que dificultan la predicción de contraseñas frente a posibles ataques cibernéticos.
+                </p>
+
+                <h4>Explicación del Algoritmo</h4>
+                <p>
+                    Un número primo es matemáticamente aquel que solo posee dos divisores exactos: el 1 y sí mismo. El programa toma la clave ingresada, utiliza un ciclo interactivo para contabilizar cuántas divisiones dan un residuo igual a cero y determina de manera automática si el código es seguro o vulnerable.
+                </p>
+
+                <h4>Formulario de Entrada</h4>
+                <form id="formPrimos">
+                    <div class="grupo-campo">
+                        <label for="codigo">Ingresa el código numérico a validar:</label>
+                        <input type="number" id="codigo" min="1" placeholder="Ej. 97" required>
+                    </div>
+                    <button type="button" id="btnVerificar" class="btn-pri">Validar Código</button>
+                </form>
+
+                <h4>Resultado en Pantalla</h4>
+                <div id="resultadoPrimo" class="caja-resultado">
+                    <p class="texto-espera">Ingresa un código para comprobar su validez y seguridad.</p>
+                </div>
+
+                <h4>Conclusión</h4>
+                <p>
+                    Los números primos fundamentan la criptografía moderna, demostrando que las propiedades de la aritmética pura proveen soluciones críticas para resguardar la privacidad de los datos en la red.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>© 2026 - Proyecto de Aplicación Matemática Interactiva</p>
+        <div class="enlaces-proyecto">
+            <a id="link-repositorio" href="https://github.com/tu-usuario/desafio-fibonacci-primos" target="_blank">Repositorio GitHub</a>
+            <span class="separador">|</span>
+            <a id="link-publicado" href="https://tu-usuario.github.io/desafio-fibonacci-primos/" target="_blank">Sitio Web Publicada</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
